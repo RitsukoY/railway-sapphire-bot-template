@@ -17,7 +17,7 @@ export class PingCommand extends Command {
 	public async chatInputRun(interaction: Command.ChatInputCommandInteraction) {
 		const msg = await interaction.reply({ content: `Ping?`, ephemeral: true, fetchReply: true });
 
-    	if (isMessageInstance(msg)) {
+    	if (msg && msg.createdTimestamp && interaction.createdTimestamp) {
       		const diff = msg.createdTimestamp - interaction.createdTimestamp;
       		const ping = Math.round(this.container.client.ws.ping);
       		return interaction.editReply(`Pong 🏓! (Round trip took: ${diff}ms. Heartbeat: ${ping}ms.)`);
