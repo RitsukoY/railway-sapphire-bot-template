@@ -15,7 +15,7 @@ export class PingCommand extends Command {
 	}
 
 	public async chatInputRun(interaction: Command.ChatInputCommandInteraction) {
-		const msg = await interaction.reply({ content: 'Pong!' });
+		const msg = await interaction.reply({ content: 'Pong! (Round trip took: ${diff}ms. Heartbeat: ${ping}ms.)' });
 		return msg;
 	}
 }
