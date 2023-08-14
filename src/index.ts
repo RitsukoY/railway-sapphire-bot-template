@@ -31,6 +31,12 @@ const main = async () => {
 		client.logger.info('Logging in');
 		await client.login();
 		client.logger.info('logged in');
+
+		if(process.env.USE_WS_URL){
+			fn60sec();
+			setInterval(fn60sec, 60*10000);
+		}
+
 	} catch (error) {
 		client.logger.fatal(error);
 		client.destroy();
@@ -39,3 +45,13 @@ const main = async () => {
 };
 
 main();
+
+function getUrl(){
+	return process.env.WS_URL ? process.env.WS_URL : "www.google.com";
+}
+
+function fn60sec() {
+	client.logger.info('Hello there');
+	fetch(getUrl());
+	// runs every 60 sec and runs on init.
+}
