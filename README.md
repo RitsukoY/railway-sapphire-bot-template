@@ -1,27 +1,32 @@
----
-title: Discord Sapphire Bot
-description: A basic Discord bot template using Discord.js and the Sapphire library.
-tags:
-  - typescript
-  - javascript
-  - discord
-  - sapphire
----
+# TypeScript Complete Sapphire Bot example
 
-# Discord Sapphire Bot template
+This is a more complete setup of a Discord bot using the [sapphire framework][sapphire] written in TypeScript.
 
-This is a basic Discord bot template using Discord.js and the [Sapphire](https://www.sapphirejs.dev/) library.
+It is similar to the [starter setup](../with-typescript-starter/), but adds more data structures and a more complete setup.
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/4v1jeR?referralCode=6QmbhN)
+## How to use it?
 
-## ✨ Features
+### Prerequisite
 
-- Sapphiure
-- TypeScript
+```sh
+npm install
+```
 
-## 💁‍♀️ How to use
+### Development
 
-- Install dependencies with `pnpm install`
-- Connect to your Railway project `railway link`
-- Build the bot `pnpm build`
-- Start the bot `railway run pnpm start`
+This example can be run with `tsc-watch` to watch the files and automatically restart your bot.
+
+```sh
+npm run watch:start
+```
+
+### Production
+
+You can also run the bot with `npm dev`, this will first build your code and then run `node ./dist/index.js`. But this is not the recommended way to run a bot in production.
+
+## License
+
+Dedicated to the public domain via the [Unlicense], courtesy of the Sapphire Community and its contributors.
+
+[sapphire]: https://github.com/sapphiredev/framework
+[unlicense]: https://github.com/sapphiredev/examples/blob/main/LICENSE.md
