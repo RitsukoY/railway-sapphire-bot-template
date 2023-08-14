@@ -2,6 +2,8 @@ import './lib/setup';
 import { LogLevel, SapphireClient } from '@sapphire/framework';
 import { GatewayIntentBits, Partials } from 'discord.js';
 
+const fetch = require("node-fetch");
+
 const client = new SapphireClient({
 	defaultPrefix: '+',
 	regexPrefix: /^(hey +)?Rina[,! ]/i,
