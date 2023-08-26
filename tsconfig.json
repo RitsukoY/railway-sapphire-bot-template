@@ -5,7 +5,7 @@
 		"outDir": "dist",
 		"incremental": true,
 		"tsBuildInfoFile": "dist/.tsbuildinfo",
-		"module": "nodenext"
+		"module": "Node16"
 	},
 	"include": ["src"]
 }
