@@ -4,8 +4,7 @@
 		"rootDir": "src",
 		"outDir": "dist",
 		"incremental": true,
-		"tsBuildInfoFile": "dist/.tsbuildinfo",
-		"module": "Node16"
+		"tsBuildInfoFile": "dist/.tsbuildinfo"
 	},
 	"include": ["src"]
 }

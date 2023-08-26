@@ -40,18 +40,79 @@ export class UserCommand extends Command {
 		// Returns a random integer from 0 to 9:		
 		let strenght = Math.floor(Math.random() * 10);
 
-        // Returns a random integer from 0 to 9:		
+    // Returns a random integer from 0 to 9:		
 		let control = Math.floor(Math.random() * 10);
+
+    // Returns a random integer from 0 to 9:		
+    let range = Math.floor(Math.random() * 15);
+
+    let rangeDesc = '';
+    if(range === 0 || range === 1){
+      rangeDesc = 'Continuous contact'
+    } 
+    if(range === 2 || range === 3){
+      rangeDesc = 'Contact'
+    } 
+    if(range === 4){
+      rangeDesc = '1 m'
+    }
+    if(range === 5){
+      rangeDesc = '3 m'
+    }
+    if(range === 6){
+      rangeDesc = '10 m'
+    }
+    if(range === 7){
+      rangeDesc = '45 m'
+    }
+    if(range === 8){
+      rangeDesc = '150 m'
+    }
+    if(range === 9){
+      rangeDesc = '500 m'
+    }
+    if(range === 10){
+      rangeDesc = 'Visual'
+    }
+    if(range === 11){
+      rangeDesc = 'City-wide'
+    }
+    if(range === 12){
+      rangeDesc = 'State-wide'
+    }
+    if(range === 13){
+      rangeDesc = 'Country-wide'
+    }
+    if(range === 14){
+      rangeDesc = 'World-wide'
+    }
+    if(range === 15){
+      rangeDesc = 'Anywhere'
+    }
+  
+    let limitationDesc = '';
+    let hasSpecialLimitation = Math.floor(Math.random() * 10);
+    if(hasSpecialLimitation >= 5){
+      let limitation = this.randomIntFromInterval(0,121);
+      limitationDesc = this.limitationsTable[limitation];
+    }
+    
 
 		let response = "Uhh...";
 
-        let name = this.powersTable[powers].name;
-        let description = this.powersTable[powers].description;
+    let name = this.powersTable[powers].name;
+    let description = this.powersTable[powers].description;
 
-        response = "Power: " + name + "\n" + 
-        "Description: " + description + "\n" +
-        "Strenght: " + strenght + "\n" + 
-        "Control: " + control;
+    response = "Power: " + name + "\n" + 
+    "Description: " + description + "\n" +
+    "Strenght: " + strenght + "\n" + 
+    "Control: " + control + "\n" +
+    "Range: " + rangeDesc
+    ;
+
+    if(limitationDesc !== ''){
+      response += "\n" + "Limitation: " + limitationDesc;
+    }
 
         const embed = new EmbedBuilder() //
 			.setColor('#3986E4')
@@ -71,6 +132,60 @@ export class UserCommand extends Command {
         // Returns a random integer from 0 to 9:		
 		let control = Math.floor(Math.random() * 10);
 
+    // Returns a random integer from 0 to 9:		
+    let range = Math.floor(Math.random() * 15);
+
+    let rangeDesc = '';
+    if(range === 0 || range === 1){
+      rangeDesc = 'Continuous contact'
+    } 
+    if(range === 2 || range === 3){
+      rangeDesc = 'Contact'
+    } 
+    if(range === 4){
+      rangeDesc = '1 m'
+    }
+    if(range === 5){
+      rangeDesc = '3 m'
+    }
+    if(range === 6){
+      rangeDesc = '10 m'
+    }
+    if(range === 7){
+      rangeDesc = '45 m'
+    }
+    if(range === 8){
+      rangeDesc = '150 m'
+    }
+    if(range === 9){
+      rangeDesc = '500 m'
+    }
+    if(range === 10){
+      rangeDesc = 'Visual'
+    }
+    if(range === 11){
+      rangeDesc = 'City-wide'
+    }
+    if(range === 12){
+      rangeDesc = 'State-wide'
+    }
+    if(range === 13){
+      rangeDesc = 'Country-wide'
+    }
+    if(range === 14){
+      rangeDesc = 'World-wide'
+    }
+    if(range === 15){
+      rangeDesc = 'Anywhere'
+    }
+
+    let limitationDesc = '';
+    let hasSpecialLimitation = Math.floor(Math.random() * 10);
+    if(hasSpecialLimitation >= 5){
+      let limitation = this.randomIntFromInterval(0,121);
+      limitationDesc = this.limitationsTable[limitation];
+    }
+
 		let response = "Uhh...";
 
         let name = this.powersTable[powers].name;
@@ -79,7 +194,13 @@ export class UserCommand extends Command {
         response = "Power: " + name + "\n" + 
         "Description: " + description + "\n" +
         "Strenght: " + strenght + "\n" + 
-        "Control: " + control;
+        "Control: " + control + "\n" +
+        "Range: " + rangeDesc
+        ;
+
+        if(limitationDesc !== ''){
+          response += "\n" + "Limitation: " + limitationDesc;
+        }
 
         const embed = new EmbedBuilder() //
 			.setColor('#3986E4')
@@ -100,6 +221,62 @@ export class UserCommand extends Command {
         // Returns a random integer from 0 to 9:		
 		let control = Math.floor(Math.random() * 10);
 
+    // Returns a random integer from 0 to 9:		
+    let range = Math.floor(Math.random() * 15);
+
+    let rangeDesc = '';
+    if(range === 0 || range === 1){
+      rangeDesc = 'Continuous contact'
+    } 
+    if(range === 2 || range === 3){
+      rangeDesc = 'Contact'
+    } 
+    if(range === 4){
+      rangeDesc = '1 m'
+    }
+    if(range === 5){
+      rangeDesc = '3 m'
+    }
+    if(range === 6){
+      rangeDesc = '10 m'
+    }
+    if(range === 7){
+      rangeDesc = '45 m'
+    }
+    if(range === 8){
+      rangeDesc = '150 m'
+    }
+    if(range === 9){
+      rangeDesc = '500 m'
+    }
+    if(range === 10){
+      rangeDesc = 'Visual'
+    }
+    if(range === 11){
+      rangeDesc = 'City-wide'
+    }
+    if(range === 12){
+      rangeDesc = 'State-wide'
+    }
+    if(range === 13){
+      rangeDesc = 'Country-wide'
+    }
+    if(range === 14){
+      rangeDesc = 'World-wide'
+    }
+    if(range === 15){
+      rangeDesc = 'Anywhere'
+    }
+  
+    let limitationDesc = '';
+    let hasSpecialLimitation = Math.floor(Math.random() * 10);
+    if(hasSpecialLimitation >= 5){
+      let limitation = this.randomIntFromInterval(0,121);
+      limitationDesc = this.limitationsTable[limitation];
+    }
+    
+    
+
 		let response = "Uhh...";
 
         let name = this.powersTable[powers].name;
@@ -108,8 +285,14 @@ export class UserCommand extends Command {
         response = "Power: " + name + "\n" + 
         "Description: " + description + "\n" +
         "Strenght: " + strenght + "\n" + 
-        "Control: " + control;
+        "Control: " + control + "\n" +
+        "Range: " + rangeDesc
+        ;
 
+        if(limitationDesc !== ''){
+          response += "\n" + "Limitation: " + limitationDesc;
+        }
+      
         const embed = new EmbedBuilder() //
 			.setColor('#3986E4')
 			.setDescription(response)
@@ -656,6 +839,134 @@ export class UserCommand extends Command {
               description: "Ability to control, generate or absorb electricity and electric phenomena"
             }
       ]
+
+
+
+      private limitationsTable: string[] =
+        [
+          "User can't turn off or deactivate at will",
+          "Requires the user's full attention",
+          "Activates randomly",
+          "Only on sleeping subjects",                                                            
+          "Only if unobserved",                                                            
+          "Needs eye-contact with target",                                                            
+          "Only while holding a specific item (common)",                                                            
+          "Only while holding a specific item (uncommon)",                                                            
+          "Only while holding a specific item (rare)",                                                            
+          "Only while holding a specific item (unique)",                                                            
+          "Except while in contact with a specific item (common)",                                                            
+          "Except while in contact with a specific item (uncommon)",                                                            
+          "Except while in contact with a specific item (rare)",                                                            
+          "Except while in contact with a specific item (unique)",                                                            
+          "Only while in contact with a specific material (common)",                                                            
+          "Only while in contact with a specific material (uncommon)",                                                            
+          "Only while in contact with a specific material (rare)",                                                            
+          "Only while in contact with a specific material (unique)",                                                            
+          "Except while in contact with a specific material (common)",                                                            
+          "Except while in contact with a specific material (uncommon)",                                                            
+          "Except while in contact with a specific material (rare)",                                                            
+          "Except while in contact with a specific material (unique)",                                                            
+          "Requires expending an ingredient (common)",                                                            
+          "Requires expending an ingredient (uncommon)",                                                            
+          "Requires expending an ingredient (rare)",                                                            
+          "Only while in contact with another specific person",                                                            
+          "Only while in contact with any other person",                                                            
+          "Except while in contact with another person",                                                            
+          "Only in/to places you could walk/climb to within one minute",                                                            
+          "Only in/to places you could walk/climb to within one hour",                                                            
+          "Only in/to places you could walk/climb to within a day",                                                            
+          "Only in/to places you could walk/climb to within a week",                                                            
+          "Only at midday",                                                            
+          "Only at midnight",                                                            
+          "Only during the day",                                                            
+          "Only during the night",                                                            
+          "Only on certain days or in certain places (common)",                                                            
+          "Only on certain days or in certain places (uncommon)",                                                            
+          "Only on certain days or in certain places (rare)",                                                            
+          "Only on certain days or in certain places (unique)",                                                            
+          "Must recharge for a day after one use",                                                            
+          "Must recharge for a day after two uses",                                                            
+          "Must recharge for a day after three uses",                                                            
+          "Must recharge for a day after five uses",                                                            
+          "Lasts for a few moments and falls unconscious after use",                                                            
+          "Lasts for a minute and falls unconscious after use",                                                            
+          "Lasts for 10 minutes and falls unconscious after use",                                                            
+          "Lasts for an hour and falls unconscious after use",                                                            
+          "Lasts for a day and falls unconscious after use",                                                            
+          "Lasts for a week and falls unconscious after use",                                                            
+          "User is temporarily blind and deafened after activation",                                                            
+          "Head aches during use",                                                            
+          "User feels extremely hungry after use",                                                            
+          "Can only use once",                                                            
+          "Only inside a certain room",                                                            
+          "Only on sick people",                                                                                                            
+          "Only while sleeping",                                                            
+          "Only on sleeping targets",                                                            
+          "Only on those who the user can see",                                                            
+          "Makes unnerving sounds while active",                                                            
+          "Only works on humans",                                                            
+          "No effect on humans",                                                            
+          "Fatal attacks only",                                                            
+          "Only works on those who have tasted the user's blood",                                                            
+          "Only works on those whose blood the user has tasted",                                                            
+          "Only activates under the adrenaline of a fight",                                                            
+          "On animals only",                                                            
+          "Delayed activation",                                                            
+          "Only after a second blow",                                                            
+          "Only at night during full moon",                                                                                                 
+          "Does not work vs. other powers",                                                            
+          "Only underwater",                                                            
+          "Requires superficial knowledge of the target",                                                            
+          "Requires moderate knowledge of the target",                                                            
+          "Requires intricate knowledge of the target",                                                            
+          "Only during winter",                                                            
+          "Not during winter",                                                            
+          "Only during summer",                                                            
+          "Not during summer",                                                            
+          "Only on those who are not aware of the user or don't know who the user is",                                                            
+          "Only on those who fear the user",                                                            
+          "Only on those who love the user",                                                            
+          "Only where Euclidean geometry is weak and when the stars are right",                                                            
+          "Only in Bad Places",                                                            
+          "Only if being hunted or in mortal danger",                                                            
+          "Only in Holy Places, or if being worshipped by hundreds of followers",                                                            
+          "Only within 1 meter of electricity",                                                            
+          "Only within 2 meters of electricity",                                                            
+          "Only within 5 meters of electricity",                                                            
+          "Only within 10 meters of electricity",                                                            
+          "Only while the user is visible to the target",                                                            
+          "Only after target interacts with the user",                                                            
+          "Does not work on the user",                                                            
+          "Granted by an unknown and mysterious being whose desires the user must follow in order to keep the power",                                                            
+          "Granted by a demon lord. Each use must hurt at least one other person.",                                                            
+          "Granted by a divine force. Cannot profit from, and must use for the good of others.",                                                            
+          "Only on targets who are willing",                                                            
+          "Only on birds",                                                            
+          "Only on mammals",                                                            
+          "Only on insects",                                                            
+          "Only on marine life",                                                            
+          "Only on reptiles",                                                            
+          "Only on fungi",                                                            
+          "Must sacrifice something of equal value to activate",                                                            
+          "Only at inconvenient times or places",                                                            
+          "Only works on energy",                                                            
+          "Only works on biological matter",                                                            
+          "Only works on non-biological matter",                                                            
+          "Only during the user's sleep",                                                            
+          "Only affects the target mentally",                                                            
+          "Humanoid form only",                                                            
+          "Stops working if someone cuts the user's hair",
+          "Cardiac stress on each use",
+          "Cerebral stress on each use",
+          "Corrupts the user's thoughts after each use",
+          "Randomly innacurate",
+          "Requires simple preparation steps or rituals before use",
+          "Requires a moderate amount of preparation steps or rituals before use",
+          "Requires a large amount of preparation steps or intrincate rituals before use",
+          "The activation is delayed for a few seconds while the user must charge or channel the power",
+          "User must yell out the name of the power before each activation",
+          "Short-term memory loss after each activation ends",
+          ];
 }
 
 
