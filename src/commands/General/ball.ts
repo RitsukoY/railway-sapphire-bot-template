@@ -177,6 +177,16 @@ export class UserCommand extends Command {
 		"Yes, about as probable as finding a cat café in Akihabara.",
 		"Just as likely as the mecha pilots shouting their attack name to themselves with unwavering confidence."
 	];
+
+	//-- Worm - Renan
+	
+	//--Academia - Marcelo
+
+	//-- D&D - Geral
+
+	//-- Piada de tiozão - Edu	//-- Earl of Dad Jokes
+
+	//--Alcool - PVC
 }
 
 
