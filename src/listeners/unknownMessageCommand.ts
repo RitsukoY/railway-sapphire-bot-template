@@ -1,5 +1,6 @@
 import type { Events } from '@sapphire/framework';
 import { Listener, UnknownMessageCommandPayload } from '@sapphire/framework';
+const fetch = require("node-fetch");
 
 export class UserEvent extends Listener<typeof Events.UnknownMessageCommand> {
 	public async run(payload: UnknownMessageCommandPayload) {		
@@ -48,7 +49,14 @@ export class UserEvent extends Listener<typeof Events.UnknownMessageCommand> {
 			});
 	
 			const data = await response.json();
-			const rinaAnswer = data.output.text;
+
+			let rinaAnswer = 'Uh-oh, looks like Yoshi-senpai did a little oopsie in my code! Call him for me please?'
+			if(data && data.output && data.output.text) {
+				rinaAnswer = data.output.text
+			} else {
+				rinaAnswer += ' Please tell him that the server response is: ' + response;
+			}
+
 			return rinaAnswer;
 		} catch (error) {
 			console.error(error);
