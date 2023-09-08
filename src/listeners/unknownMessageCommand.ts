@@ -54,7 +54,7 @@ export class UserEvent extends Listener<typeof Events.UnknownMessageCommand> {
 			if(data && data.output && data.output.text) {
 				rinaAnswer = data.output.text
 			} else {
-				rinaAnswer += ' Please tell him that the server response is: ' + response;
+				rinaAnswer += ' Please tell him that the server response is: ' + response?.json() ? response.json() : response ;
 			}
 
 			return rinaAnswer;
